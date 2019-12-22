@@ -1,0 +1,66 @@
+{
+  "name": "yardmapper",
+  "version": "1.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "storybook": "start-storybook",
+    "build": "webpack --mode production",
+    "flow": "flow",
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rachio/yardmapper.git"
+  },
+  "keywords": [],
+  "author": "Ben Paige",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.3.2",
+    "@material-ui/styles": "^4.3.0",
+    "classnames": "^2.2.6",
+    "convert-units": "^2.3.4",
+    "react-google-maps": "^9.4.5",
+    "react-lottie": "^1.2.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-flow": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "@storybook/react": "^5.2.8",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^4.3.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "style-loader": "^1.0.1",
+    "url-loader": "^0.5.9",
+    "uuid": "^3.3.3",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react",
+      "@babel/preset-flow"
+    ],
+    "env": {
+      "development": {
+        "compact": false
+      }
+    }
+  }
+}

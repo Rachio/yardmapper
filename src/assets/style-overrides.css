@@ -1,0 +1,167 @@
+/*
+  Global imports
+ */
+/* Generic/Free fonts */
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i); */
+/* Licensed fonts */
+@import './fonts/avenir-next/fontFace.css';
+
+/* Main */
+  body {
+    font-family: 'AvenirNext-Medium', sans-serif;
+    margin: 0;
+  }
+  [type='button'] {
+    /* See: https://github.com/callemall/material-ui/issues/4008 */
+    -webkit-appearance: none;
+  }
+
+  .clickable {
+    cursor: pointer;
+  }
+  .clickable:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .clickable:hover * {
+    background-color: transparent;
+  }
+
+  /* ZenDesk Help button */
+  .zEWidget-launcher--active {
+    display: none !important;
+  }
+
+  /* Styles for transitions (see `router.js` for example) */
+  .SlideIn-appear {
+    transform: translateY(100%);
+    transition-duration: 0s;
+  }
+  .SlideIn-appear.SlideIn-appear-active {
+    transform: translateY(0);
+    transition: all 0.5s ease-out;
+  }
+  .SlideIn-enter {
+    transform: translateY(100%);
+    transition-duration: 0s;
+  }
+  .SlideIn-enter.SlideIn-enter-active {
+    transform: translateY(0);
+    transition: all 0.5s ease-out;
+  }
+  .SlideIn-exit {
+    transform: translateY(0);
+    transition: all 0.5s linear;
+  }
+  .SlideIn-exit.SlideIn-exit-active {
+    transform: translateY(100%);
+    transition: all 0.5s ease-out;
+  }
+
+  /* Styles for transitions (see `router.js` for example) */
+  .SlideLeftRight-appear {
+    transform: translateX(100%);
+    transition-duration: 0s;
+  }
+  .SlideLeftRight-appear.SlideLeftRight-appear-active {
+    transform: translateX(0);
+    transition: all 0.5s ease-out;
+  }
+  .SlideLeftRight-enter {
+    transform: translateX(100%);
+    transition-duration: 0s;
+  }
+  .SlideLeftRight-enter.SlideLeftRight-enter-active {
+    transform: translateX(0);
+    transition: all 0.5s ease-out;
+  }
+  /* Don't change anything for the exit init */
+  .SlideLeftRight-exit.SlideLeftRight-exit-active {
+    transform: translateX(100%);
+    transition: all 0.5s ease-out;
+  }
+
+  /* Enter from right, exit from left */
+  .SlideLeftLeft-appear {
+    transform: translateX(100%);
+    transition-duration: 0s;
+  }
+  .SlideLefttLeft-appear.SlideLeftLeft-appear-active {
+    transform: translateX(0);
+    transition: all 0.5s ease-out;
+  }
+  .SlideLeftLeft-enter {
+    transform: translateX(100%);
+    transition-duration: 0s;
+  }
+  .SlideLeftLeft-enter.SlideLeftLeft-enter-active {
+    transform: translateX(0);
+    transition: all 0.5s ease-out;
+  }
+  .SlideLeftLeft-exit {
+    transform: translateX(0);
+    transition: all 0.5s ease-out;
+  }
+  .SlideLeftLeft-exit.SlideLeftLeft-exit-active {
+    transform: translateX(-100%);
+    transition: all 0.5s ease-out;
+  }
+
+  /* Enter from left, exit to right */
+  .SlideRightRight-appear {
+    transform: translateX(-100%);
+    transition-duration: 0s;
+  }
+  .SlideRightRight-appear.SlideRightRight-appear-active {
+    transform: translateX(0);
+    transition: all 0.5s ease-out;
+  }
+  .SlideRightRight-enter {
+    transform: translateX(-100%);
+    transition-duration: 0s;
+  }
+  .SlideRightRight-enter.SlideRightRight-enter-active {
+    transform: translateX(0);
+    transition: all 0.5s ease-out;
+  }
+  .SlideRightRight-exit {
+    transform: translateX(0);
+    transition: all 0.5s ease-out;
+  }
+  .SlideRightRight-exit.SlideRightRight-exit-active {
+    transform: translateX(100%);
+    transition: all 0.5s ease-out;
+  }
+
+  /*
+  /* FadeAndCollapse on exit
+  /* Used for list item dismissal
+  */
+  .FadeAndCollapse-appear {
+    opacity: 0.01;
+    max-height: 0px;
+    transition-duration: 0s;
+  }
+  .FadeAndCollapse-appear.FadeAndCollapse-appear-active {
+    opacity: 1;
+    max-height: 200px;
+    transition: all 0.5s ease-out;
+  }
+  .FadeAndCollapse-enter {
+    opacity: 0.01;
+    max-height: 0px;
+    transition-duration: 0s;
+  }
+  .FadeAndCollapse-enter.FadeAndCollapse-enter-active {
+    opacity: 1;
+    max-height: 200px;
+    transition: all 0.5s ease-out;
+  }
+  .FadeAndCollapse-exit {
+    opacity: 1;
+    max-height: 200px;
+  }
+  .FadeAndCollapse-exit.FadeAndCollapse-exit-active {
+    opacity: 0.01;
+    max-height: 0px;
+    transition: all 0.5s ease-out;
+  }
