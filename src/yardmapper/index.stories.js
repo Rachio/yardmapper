@@ -12,7 +12,7 @@ export default { title: 'Yardmapper' }
 export const map = () => {
 
     const center = {lat: 39.7487931, lng: -105.0011805}
-    const maxSize = 12000
+    const maxSize = 11000
     const isMetric = false
 
     const onComplete = (event) => {
