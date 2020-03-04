@@ -162,6 +162,7 @@ const Manual = (props: Props) => {
               min: 1,
               max: props.maxSize,
               pattern: '[0-9]*',
+              maxLength="5",
               classes: {
                 underline: classes.underline
               }
