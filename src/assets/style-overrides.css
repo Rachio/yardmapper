@@ -165,3 +165,20 @@
     max-height: 0px;
     transition: all 0.5s ease-out;
   }
+
+
+/* BTN OVERRIDES */
+
+#delete-last-btn{
+  background: white !important;
+  color: #767679 !important;
+}
+
+#delete-last-btn:hover{
+  background: white !important;
+  color: black !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+
