@@ -212,7 +212,7 @@
 }
 
 .back-link{
-    text-decoration: none !important;
+  text-decoration: none !important;
   font-family: Avenir Next !important;
   font-style: normal !important;
   font-weight: 700;
@@ -225,7 +225,49 @@
   margin-top: 1px;
 }
 .back-link:hover{
+
+}
+
+.custom-dialog{
+  border: 30px solid white !important;
+}
+
+.map-tap{
+  font-family: Avenir Next !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  text-align: center !important;
+  color: #767679 !important;
+  max-width: 300px !important;
+  margin: auto !important;
+  margin-bottom: 15px !important; 
+  margin-top: 10px !important;
+}
+
+.got-it-btn{
+  letter-spacing: 0px !important;
+  font-family: Avenir Next, Avenir !important;
+  font-style: normal !important;
+  font-weight: 600!important;
+  font-size: 16px !important;
+  line-height: 30px !important;
+  padding: 15px 20px !important;
+  background: #00A7E1 !important;
+  color: white !important;
+  transition: all .3s ease !important;
+  border-radius: 50px !important;
+  width: 211px !important;
+  margin: auto !important;
+  text-transform: none !important;
+  display: flex !important;
+  margin-bottom: 3px !important;
+}
+
+.got-it-btn > span{
   
+  text-transform: none !important;
 }
 
 .primaryContentInnerWrap{

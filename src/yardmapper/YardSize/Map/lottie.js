@@ -90,22 +90,22 @@ const MapLottie = ({ closeLottie, open }: Props) => {
   const classes = mapLottieStyles()
   return (
     <Dialog className={classes.root} open={open} onClose={closeLottie}>
-      <DialogContent className={classes.dialog}>
-        <Lottie options={defaultOptions} />
+      <DialogContent className={classes.dialog + ' custom-dialog'}>
+        <Lottie className='custom-lottie' options={defaultOptions} />
         <DialogContentText>
-          <Typography className={classes.text} variant={'body2'}>
-            {"Draw a rough outline of the area you'd like to cover"}
+          <Typography className={classes.text + ' map-tap'} variant={'body2'}>
+            {"Tap on map to outline your lawn and calculate square footage."}
           </Typography>
         </DialogContentText>
         <Button
           autoFocus
-          className={classes.btn}
+          className={classes.btn + ' got-it-btn'}
           color="primary"
           fullWidth
           onClick={closeLottie}
           variant={'contained'}
         >
-          {'GOT IT'}
+          {'Got It'}
         </Button>
       </DialogContent>
     </Dialog>
