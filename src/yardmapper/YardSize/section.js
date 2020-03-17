@@ -41,11 +41,31 @@ const yardSizeSectionStyles: () => YardSizeSectionClasses = makeStyles(
       button: {
         width: spacing * 25,
         borderRadius: '100px !important',
-        marginRight: `${spacing * 3}px !important`,
+        textTransform: 'none !important',
+        letterSpacing: '0px !important',
+        height: 'auto !important',
+        padding: '18px 39px !important',
+        width: 'auto !important',
+        transition: 'all .3s ease',
+        fontFamily: 'Avenir Next !important',
+        fontStyle: 'normal !important',
+        fontWeight: '700 !important',
+        fontSize: '16px !important',
+        lineHeight: '30px !important',
+        display: 'flex !important',
+        alignItems: 'center !important',
+        textAlign: 'center !important',
+        color: '#FFFFFF !important',
+        textTransform: 'none !important',
+        letterSpacing: '0px !important',
+        height: 'auto !important',
+        padding: '18px 39px !important',
+        width: 'auto !important',
         [theme.breakpoints.down('xs')]: {
           width: '100% !important',
           borderRadius: '0px !important',
           margin: '0px !important'
+
         }
       },
       buttonDisabled: {
@@ -61,11 +81,31 @@ const yardSizeSectionStyles: () => YardSizeSectionClasses = makeStyles(
         display: 'flex',
         justifyContent: 'flex-end'
       },
+      buttonContainerAnalysis: {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        flexBasis: '20%',
+        float: 'right',
+        position: 'absolute',
+        right: '0px',
+        top: '0px',
+      },
       headerCopy: {
-        color: `${Colors.gray} !imoprtant`
+        fontFamily: 'Avenir Next !important',
+        fontStyle: 'normal !important',
+        fontWeight: '500 !important',
+        fontSize: '12px !important',
+        lineHeight: '18px !important',
+        textAlign: 'center !important',
+        color: '#767679 !important',
+        display: 'inline-block !important',
+        paddingRight: '15px !important',
       },
       root: {
         display: 'flex',
+        paddingTop: '20px !important',
+        paddingBottom: '20px !important',
+        textTransform: 'none !important',
         alignItems: 'center',
         justifyContent: 'space-between',
         backgroundColor: Colors.white,
@@ -78,28 +118,64 @@ const yardSizeSectionStyles: () => YardSizeSectionClasses = makeStyles(
         }
       },
       primaryContent: {
-        padding: `${spacing * 2}px`
+        padding: '13.5px',
+        textTransform: 'none !important',
+        boxSizing: 'border-box',
+        display: 'flex',
+        flexBasis: '60%',
+      },
+      backContent: {
+        display: 'flex',
+        flexBasis: '20%',
       },
       textContainer: {
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        textTransform: 'none !important',
       },
       yardSizeText: {
-        fontSize: '22pt !important'
+        fontSize: '22pt !important',
+        textTransform: 'none !important',
+        fontFamily: 'Avenir Next !important',
+        fontStyle: 'normal !important',
+        fontWeight: 'bold !important',
+        fontSize: '24px !important',
+        lineHeight: '33px !important',
+        textAlign: 'center !important',
+        color: '#767679 !important',
+        display: 'inline-block !important',
+        marginBottom: '0px !important',
       },
       manualBtn: {
         color: `${Colors.rachioBlue} !important`,
-        paddingLeft: spacing,
         fontFamily: 'Avenir Next',
         fontSize: '10px !important',
-        fontWeight: 500,
+        fontWeight: '500',
         letterSpacing: '1.89px',
         lineHeight: '15px',
-        textShadow: '0 0 4px 0 rgba(0,0,0,0.5)'
+        textShadow: '0 0 4px 0 rgba(0,0,0,0.5)',
+        fontFamily: 'Avenir Next !important',
+        fontStyle: 'normal !important',
+        fontWeight: 'bold !important',
+        fontSize: '16px !important',
+        lineHeight: '30px !important',
+        textTransform: 'none !important',
+        letterSpacing: '0px !important',
+        height: 'auto !important',
+        width: 'auto !important',
+        fontStyle: 'normal !important',
+        fontWeight: '500 !important',
+        fontSize: '12px !important',
+        lineHeight: '18px !important',
+        display: 'inline-block !important',
+        padding: '0px !important',
+        minWidth: '0px !important',  
+        paddingLeft: '9px !important',      
       },
       helperText: {
         color: `${Colors.gray_tint_2} !imoprtant`,
-        fontSize: '12px !important'
+        fontSize: '12px !important',
+        textTransform: 'none !important',
       }
     }
   }
@@ -124,51 +200,62 @@ const YardSizeSection = (props: {
 
   return (
     <div data-component-id={'YARD-SIZE-SECTION'} className={classes.root}>
-      <div className={classes.primaryContent}>
-        <Typography variant={'subtitle1'} className={classes.headerCopy}>
-          {'Estimated Lawn Size'}
-        </Typography>
-        <div className={classes.textContainer}>
-          <Typography
-            variant={'h3'}
-            className={classes.yardSizeText}
-            gutterBottom
-          >
-            {`${formatAsNumber(props.yardSize)} ${props.unitLabel}`}
-          </Typography>
+      <div className="container">
+
+        <div className={classes.backContent + ' back-content-wrap'} >
+          <a href="https://rachio.com/thrive" target="_blank" className="back-link"><img className="back-arrow" src="http://s3-us-west-2.amazonaws.com/rachio-com-cms-media-dev/uploads/2020/01/09171626/leftback_24px.png" /> Back</a>
         </div>
-        <div className={classes.textContainer}>
-          <Typography
-            className={classes.helperText}
-            variant={'body2'}
-            style={{ color: `rgb(153,152,152)`}}>
-            {'Know your exact lawn measurements? '}
+        <div className={classes.primaryContent}>
+          <div className="primaryContentInnerWrap">
+
+
+
+          <Typography variant={'subtitle1'} className={classes.headerCopy}>
+            {'Estimated Lawn Size'}
           </Typography>
-          <Button
-            color="primary"
-            className={classes.manualBtn}
-            onClick={() => props.setManualSizeDialogOpen(true)}
-          >
-            {'Enter Manually'}
-          </Button>
+          {/*<div className={classes.textContainer}>
+            <Typography
+              className={classes.helperText}
+              variant={'body2'}
+              style={{ color: `rgb(153,152,152)`}}>
+              {'Know your exact lawn measurements? '}
+            </Typography>*/}
+
+              <Typography
+                variant={'h3'}
+                className={classes.yardSizeText}
+                gutterBottom
+              >
+                {`${formatAsNumber(props.yardSize)}` + ' sq ft'}
+              </Typography>
+
+            <Button
+              color="primary"
+              className={classes.manualBtn}
+              onClick={() => props.setManualSizeDialogOpen(true)}
+            >
+              {'Edit'}
+            </Button> 
+          {/*</div>*/}
+          </div>
         </div>
-      </div>
-      <div className={classes.buttonContainer}>
-        <MuiButton
-          onClick={() => {
-            if (props.tooBig) {
-              props.setMaxSizeErrorOpen(true)
-            } else {
-              props.handleSubmit()
-            }
-          }}
-          className={classnames(classes.button, {
-            [classes.buttonDisabled]: props.disabled
-          })}
-          disabled={props.disabled}
-        >
-          {'Finish'}
-        </MuiButton>
+        <div className={classes.buttonContainerAnalysis}>
+          <MuiButton
+            onClick={() => {
+              if (props.tooBig) {
+                props.setMaxSizeErrorOpen(true)
+              } else {
+                props.handleSubmit()
+              }
+            }}
+            className={'analysis-show ' + classnames(classes.button, {
+              [classes.buttonDisabled]: props.disabled
+            })}
+            disabled={props.disabled} 
+          >
+            {'Show My Analysis'}
+          </MuiButton>
+        </div>
       </div>
     </div>
   )
