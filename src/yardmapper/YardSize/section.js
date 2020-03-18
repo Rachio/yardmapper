@@ -40,7 +40,7 @@ const yardSizeSectionStyles: () => YardSizeSectionClasses = makeStyles(
     return {
       button: {
         width: spacing * 25,
-        borderRadius: '100px !important',
+        borderRadius: '50px !important',
         textTransform: 'none !important',
         letterSpacing: '0px !important',
         height: 'auto !important',
@@ -84,11 +84,9 @@ const yardSizeSectionStyles: () => YardSizeSectionClasses = makeStyles(
       buttonContainerAnalysis: {
         display: 'flex',
         justifyContent: 'flex-end',
-        flexBasis: '20%',
+        flexBasis: '25%',
+        width: '25%',
         float: 'right',
-        position: 'absolute',
-        right: '0px',
-        top: '0px',
       },
       headerCopy: {
         fontFamily: 'Avenir Next !important',
@@ -122,11 +120,13 @@ const yardSizeSectionStyles: () => YardSizeSectionClasses = makeStyles(
         textTransform: 'none !important',
         boxSizing: 'border-box',
         display: 'flex',
-        flexBasis: '60%',
+        flexBasis: '55%',
+        width: '55%',
       },
       backContent: {
         display: 'flex',
         flexBasis: '20%',
+        width: '20%',
       },
       textContainer: {
         display: 'flex',
@@ -170,7 +170,10 @@ const yardSizeSectionStyles: () => YardSizeSectionClasses = makeStyles(
         display: 'inline-block !important',
         padding: '0px !important',
         minWidth: '0px !important',  
-        paddingLeft: '9px !important',      
+        paddingLeft: '9px !important',   
+        '&:hover': {
+          backgroundColor: 'transparent !important',
+        }   
       },
       helperText: {
         color: `${Colors.gray_tint_2} !imoprtant`,
@@ -205,10 +208,8 @@ const YardSizeSection = (props: {
         <div className={classes.backContent + ' back-content-wrap'} >
           <a href="https://rachio.com/thrive" target="_blank" className="back-link"><img className="back-arrow" src="http://s3-us-west-2.amazonaws.com/rachio-com-cms-media-dev/uploads/2020/01/09171626/leftback_24px.png" /> Back</a>
         </div>
-        <div className={classes.primaryContent}>
+        <div className={classes.primaryContent + ' primary-content-outer-wrap'}>
           <div className="primaryContentInnerWrap">
-
-
 
           <Typography variant={'subtitle1'} className={classes.headerCopy}>
             {'Estimated Lawn Size'}
@@ -234,12 +235,12 @@ const YardSizeSection = (props: {
               className={classes.manualBtn}
               onClick={() => props.setManualSizeDialogOpen(true)}
             >
-              {'Edit'}
+              {'Edit'} 
             </Button> 
           {/*</div>*/}
           </div>
         </div>
-        <div className={classes.buttonContainerAnalysis}>
+        <div className={'button-cont-analysis-wrap ' + classes.buttonContainerAnalysis}>
           <MuiButton
             onClick={() => {
               if (props.tooBig) {
