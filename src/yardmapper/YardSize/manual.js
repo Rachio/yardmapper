@@ -28,7 +28,7 @@ type Props = {
 type Classes = {
   buttonEnter: string,
   buttonCancel: string,
-  label: string,
+  label: string, 
   inputAdornment: string,
   underline: string
 }
@@ -42,7 +42,7 @@ const styles: () => Classes = makeStyles(theme => ({
     color: Colors.gray_tint_1
   },
   buttonEnter: {
-    color: Colors.rachioBlue
+    color: Colors.rachioBlue 
   },
   label: {
     color: Colors.rachioBlue + ' !important' // Tried using the `classes` prop to override the `focused` class :/

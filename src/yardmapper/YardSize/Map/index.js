@@ -230,7 +230,7 @@ const Map = ({
       <div className={classes.root}>
         {!isLottieOpen && (
               <div>
-                <div className={classes.banner}>
+                {/*<div className={classes.banner}>
                   <Fade in timeout={1500}>
                     <div className={classes.toolTip}>
                       <Typography className={classes.toolTipText}>
@@ -240,7 +240,7 @@ const Map = ({
                       </Typography>
                     </div>
                   </Fade>
-                </div>
+                </div>*/}
                 <MapControls
                   clearPolygons={() => {
                     setPolygons([])
