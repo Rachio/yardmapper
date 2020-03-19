@@ -31,7 +31,8 @@ export const Yardmapper = (props) => {
         <YardSize
           isLottieOpen={isLottieOpen}
           closeLottie={() => closeLottie(false)}
-          {...props}/>
+          {...props}
+        />
       </ThemeProvider>
     )
 }

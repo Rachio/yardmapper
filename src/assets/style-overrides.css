@@ -246,6 +246,11 @@
   margin: auto !important;
   margin-bottom: 15px !important; 
   margin-top: 10px !important;
+  position: relative !important;
+}
+
+.map-tap-wrap{
+  width: 100% !important;
 }
 
 .got-it-btn{
@@ -288,7 +293,7 @@ div.outer-back-content-wrap{
     bottom: 150px;
 }
 
-.container{
+.constrainer{
   padding: 0px 30px;
   display: flex;
   flex-wrap: wrap;

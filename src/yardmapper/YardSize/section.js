@@ -203,7 +203,7 @@ const YardSizeSection = (props: {
 
   return (
     <div data-component-id={'YARD-SIZE-SECTION'} className={'outer-back-content-wrap ' + classes.root}>
-      <div className="container">
+      <div className="constrainer">
 
         <div className={classes.backContent + ' back-content-wrap'} >
           <a href="https://rachio.com/thrive" target="_blank" className="back-link"><img className="back-arrow" src="http://s3-us-west-2.amazonaws.com/rachio-com-cms-media-dev/uploads/2020/01/09171626/leftback_24px.png" /> Back</a>
@@ -211,7 +211,7 @@ const YardSizeSection = (props: {
         <div className={classes.primaryContent + ' primary-content-outer-wrap'}>
           <div className="primaryContentInnerWrap">
 
-          <Typography variant={'subtitle1'} className={classes.headerCopy}>
+          <Typography variant={'subtitle1'} className={'header-copy ' + classes.headerCopy}>
             {'Estimated Lawn Size'}
           </Typography>
           {/*<div className={classes.textContainer}>
@@ -224,7 +224,7 @@ const YardSizeSection = (props: {
 
               <Typography
                 variant={'h3'}
-                className={classes.yardSizeText}
+                className={'yard-size-text ' + classes.yardSizeText}
                 gutterBottom
               >
                 {`${formatAsNumber(props.yardSize)}` + ' sq ft'}
@@ -232,7 +232,7 @@ const YardSizeSection = (props: {
 
             <Button
               color="primary"
-              className={classes.manualBtn}
+              className={'edit-btn ' + classes.manualBtn}
               onClick={() => props.setManualSizeDialogOpen(true)}
             >
               {'Edit'} 

@@ -229,9 +229,9 @@ const Map = ({
 
   return (
     <div data-component-id={COMPONENT_ID} key={center.toString()}>
-      <div className={classes.root}>
+      <div className={'index-root-wrap ' + classes.root}>
         {!isLottieOpen && (
-              <div>
+              <div className="map-controls-wrap">
                 {/*<div className={classes.banner}>
                   <Fade in timeout={1500}>
                     <div className={classes.toolTip}>
@@ -256,15 +256,15 @@ const Map = ({
                 />
               </div>
             )}
-        <GoogleMap
-          defaultCenter={center}
-          defaultOptions={DEFAULT_MAP_OPTIONS}
-          defaultTilt={DEFAULT_TILT}
-          defaultZoom={DEFAULT_ZOOM}
-          mapTypeId={DEFAULT_MAP_TYPE}
-          onClick={() => setDrawingMode(POLYGON)}
-          ref={mapRef}
-        >
+          <GoogleMap
+            defaultCenter={center}
+            defaultOptions={DEFAULT_MAP_OPTIONS}
+            defaultTilt={DEFAULT_TILT}
+            defaultZoom={DEFAULT_ZOOM}
+            mapTypeId={DEFAULT_MAP_TYPE}
+            onClick={() => setDrawingMode(POLYGON)}
+            ref={mapRef}
+          >
           <MapLottie open={isLottieOpen} closeLottie={closeLottie} />
           <DrawingManager
             drawingMode={drawingMode}

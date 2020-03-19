@@ -89,10 +89,10 @@ type Props = {|
 const MapLottie = ({ closeLottie, open }: Props) => {
   const classes = mapLottieStyles()
   return (
-    <Dialog className={classes.root} open={open} onClose={closeLottie}>
+    <Dialog className={'dialog-root-wrap ' + classes.root} open={open} onClose={closeLottie}>
       <DialogContent className={classes.dialog + ' custom-dialog'}>
         <Lottie className='custom-lottie' options={defaultOptions} />
-        <DialogContentText>
+        <DialogContentText className="map-tap-wrap">
           <Typography className={classes.text + ' map-tap'} variant={'body2'}>
             {"Tap on map to outline your lawn and calculate square footage."}
           </Typography>

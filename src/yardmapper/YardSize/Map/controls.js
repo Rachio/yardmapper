@@ -137,15 +137,15 @@ const Controls = ({
   const classes = mapControlsStlyes()
 
   return (
-    <div className={classes.root}>
-        <span className={classes.tintBox}>
+    <div className={'controls-root-wrap ' + classes.root}>
+        <span className={'tint-box' + classes.tintBox}>
         {showClearButton && (
           <span>
-            <Button id='clear-all-btn' className={classes.btn} onClick={clearPolygons}>
+            <Button className={'clear-all-btn ' + classes.btn} onClick={clearPolygons}>
               {'Clear All'}
             </Button>
             <Button
-              className={classes.btn}
+              className={'delete-last-btn ' + classes.btn}
               id='delete-last-btn'
               style={{ marginLeft: 8, marginRight: 8 }}
               onClick={removeLastPolygon}
@@ -156,8 +156,8 @@ const Controls = ({
         )}
         </span>
         <IconButton className={'gps-btn ' + classes.gpsBtn} onClick={centerMap}>
-          <img src={GpsIcon} className={classes.gpsBtnImage} title={'center map'} alt={'center-icon'} />
-          <img src={GpsIconHover} className={classes.gpsBtnImageHover} title={'center map'} alt={'center-icon'} />
+          <img src={GpsIcon} className={'gps-btn-img ' + classes.gpsBtnImage} title={'center map'} alt={'center-icon'} />
+          <img src={GpsIconHover} className={'gps-btn-img-hover ' + classes.gpsBtnImageHover} title={'center map'} alt={'center-icon'} />
         </IconButton>
     </div>
   )
