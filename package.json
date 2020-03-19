@@ -1,6 +1,6 @@
 {
   "name": "yardmapper",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Yardmapper is a react module that allows users to map lawn area polygons or enter lawn size manually. uses google maps api, react-google-maps, material-ui with a lottie as an instructional dialog.",
   "main": "dist/index.js",
   "scripts": {
