@@ -29,6 +29,8 @@ const mapControlsStlyes: () => Classes = makeStyles(theme => {
       flexDirection: 'row',
       padding: 0,
       position: 'absolute',
+      width: '100%',
+      height: '100%',
       transform: `translateY(${spacing * 2.5}px) translateX(${spacing * 2.5}px)`
     },
     tintBox: {
@@ -150,13 +152,13 @@ const Controls = ({
             >
               {'Delete Last'}
             </Button>
-        </span>
+          </span>
         )}
-          <IconButton className={classes.gpsBtn} onClick={centerMap}>
-            <img src={GpsIcon} className={classes.gpsBtnImage} title={'center map'} alt={'center-icon'} />
-            <img src={GpsIconHover} className={classes.gpsBtnImageHover} title={'center map'} alt={'center-icon'} />
-        </IconButton>
         </span>
+        <IconButton className={'gps-btn ' + classes.gpsBtn} onClick={centerMap}>
+          <img src={GpsIcon} className={classes.gpsBtnImage} title={'center map'} alt={'center-icon'} />
+          <img src={GpsIconHover} className={classes.gpsBtnImageHover} title={'center map'} alt={'center-icon'} />
+        </IconButton>
     </div>
   )
 }

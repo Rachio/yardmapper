@@ -113,7 +113,9 @@ const mapStyles: () => Classes = makeStyles(theme => {
     },
     root: {
       position: 'absolute',
-      top: 0
+      top: 0,
+      width: '100%',
+      height: '100%',
     }
   }
 })

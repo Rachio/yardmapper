@@ -162,14 +162,14 @@ const Manual = (props: Props) => {
               min: 1,
               max: props.maxSize,
               pattern: '[0-9]*',
-              maxLength="5",
+              maxLength: '5',
               classes: {
-                underline: classes.underline
+                underline: classes.underline,
               }
             }}
             InputLabelProps={{
               className: classes.label,
-              shrink: true
+              shrink: true,
             }}
             label={'Lawn Size'}
             margin={'dense'}

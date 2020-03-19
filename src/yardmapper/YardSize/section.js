@@ -202,7 +202,7 @@ const YardSizeSection = (props: {
   const classes: YardSizeSectionClasses = yardSizeSectionStyles()
 
   return (
-    <div data-component-id={'YARD-SIZE-SECTION'} className={classes.root}>
+    <div data-component-id={'YARD-SIZE-SECTION'} className={'outer-back-content-wrap ' + classes.root}>
       <div className="container">
 
         <div className={classes.backContent + ' back-content-wrap'} >

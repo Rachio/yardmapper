@@ -10,7 +10,7 @@ import { makeStyles } from '@material-ui/styles'
 import * as React from 'react'
 import Manual from './manual'
 import Map, { POLYGON } from './Map'
-import MaxSize from './maxSize'
+import MaxSize from './maxSize' 
 import YardSizeSection from './section'
 
 // Types/Constants ////////////////////////////////////////////////////////////
